@@ -8,7 +8,7 @@
 3. Run StockApp
 
 ## Test case
-###Test: Placing Buy Limit order
+### Test: Placing Buy Limit order
 
 >Action: BUY SNAP LMT $30 100 
 
