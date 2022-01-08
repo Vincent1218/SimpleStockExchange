@@ -8,18 +8,18 @@
 3. Run StockApp
 
 ## Test case
-####Test: Placing Buy Limit order
+###Test: Placing Buy Limit order
 
 >Action: BUY SNAP LMT $30 100 
 
 You have placed a limit buy order for 100 SNAP shares at $30.00 each.
 
-####Test: View Orders
+###Test: View Orders
 
 >Action: VIEW ORDERS
 1. SNAP LMT BUY $30.00 0/100 PENDING
 
-####Test: Placing Buy Market order
+###Test: Placing Buy Market order
 
 >Action: BUY FB MKT 20
 
@@ -29,7 +29,7 @@ You have placed a market order for 20 FB shares.
 1. SNAP LMT BUY $30.00 0/100 PENDING 
 2. FB MKT BUY 0/20 PENDING
 
-####Test: Placing Sell Limit order
+###Test: Placing Sell Limit order
 
 >Action: SELL FB LMT $20.00 20
 
@@ -40,7 +40,7 @@ You have placed a limit sell order for 20 FB shares at $20.00 each
 2. FB MKT BUY $20.00 20/20 FILLED
 3. FB LMT SELL $20.00 20/20 FILLED
 
-####Test: Placing Sell Market order
+###Test: Placing Sell Market order
 
 >Action: SELL SNAP MKT 20
 
@@ -52,7 +52,7 @@ You have placed a market sell order for 20 SNAP shares at $30.00 each
 3. FB LMT SELL $20.00 20/20 FILLED
 4. SNAP MKT SELL $30.0 20/20 FILLED
 
-####Test: Higher limit SELL price does not trigger lower BUY price
+###Test: Higher limit SELL price does not trigger lower BUY price
 
 >Action: SELL SNAP LMT $31.00 10
 
@@ -65,13 +65,13 @@ You have placed a limit sell order for 10 SNAP shares at $31.00 each
 4. SNAP MKT SELL $30.0 20/20 FILLED
 5. SNAP LMT SELL $31.0 0/10 PENDING
 
-####Test: Quote Symbol
+###Test: Quote Symbol
 
 >Action: QUOTE SNAP
 
 SNAP BID: $30.00 ASK: $31.00 LAST: $30.00
 
-####Test: Sell stock position amount over available buy position
+###Test: Sell stock position amount over available buy position
 
 >Action: SELL SNAP LMT $30.00 100
 
@@ -85,8 +85,8 @@ You have placed a limit sell order for 100 SNAP shares at $30.0 each.
 5. SNAP LMT SELL $31.0 0/10 PENDING
 6. SNAP LMT SELL $30.0 80/100 PARTIAL
 
-####Test: Higher limit BUY price trigger lower SELL price
-#### (Note: It will trigger the first SELL price encounter from oldest to most recent order)
+###Test: Higher limit BUY price trigger lower SELL price
+### (Note: It will trigger the first SELL price encounter from oldest to most recent order)
 >Action: BUY SNAP LMT $32.00 10
 
 You have placed a limit buy order for 10 SNAP shares at $32.0 each.
