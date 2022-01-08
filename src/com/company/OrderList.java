@@ -250,6 +250,15 @@ public class OrderList {
                 last = tOrder.getTriggerPrice();
             }
         }
+        if(bid == -1){
+            System.out.println("No available " + symbol + " position to sell");
+        }
+        if(ask == Integer.MAX_VALUE){
+            System.out.println("No available " + symbol + " position to buy");
+        }
+        if(last == 0){
+            System.out.println("No transaction has been made for " + symbol);
+        }
         System.out.println(symbol + " " + "BID: $" + bid + " ASK: $" + ask + " LAST: $" + last );
     }
 }

@@ -79,9 +79,13 @@ public class Order {
     public void setStatus(String status) { this.status = status;}
 
     public void printOrder(){
-        if(this.triggerPrice == 0){
+        if((this.triggerPrice == 0) && (this.type.equals("LMT"))){
+            System.out.println(this.orderId + ". " + this.symbol + " " + this.type + " " + this.action + " $" +
+                    this.limitPrice + " " + (this.amount - this.notFilled) + "/" + this.amount + " " + this.status );
+        }
+        else if((this.triggerPrice == 0) && (this.type.equals("MKT"))){
             System.out.println(this.orderId + ". " + this.symbol + " " + this.type + " " + this.action + " " +
-                      (this.amount - this.notFilled) + "/" + this.amount + " " + this.status );
+                    (this.amount - this.notFilled) + "/" + this.amount + " " + this.status );
         }
         else{
             System.out.println(this.orderId + ". " + this.symbol + " " + this.type + " " + this.action + " $" +
