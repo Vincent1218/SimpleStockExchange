@@ -31,10 +31,10 @@ public class OrderList {
                 else if (tOrder.getNotFilled() < order.getNotFilled()){
                     tOrder.setTriggerPrice((((tOrder.getAmount() - tOrder.getNotFilled()) * tOrder.getTriggerPrice()) + (tOrder.getNotFilled() * order.getLimitPrice()))/(tOrder.getAmount()));
                     order.setTriggerPrice((((order.getAmount() - order.getNotFilled()) * order.getTriggerPrice()) + ((order.getNotFilled() - tOrder.getNotFilled()) * order.getLimitPrice()))/(order.getAmount() - tOrder.getNotFilled()));
-                    tOrder.setNotFilled(0);
-                    tOrder.setStatus("FILLED");
                     order.setNotFilled(order.getNotFilled() - tOrder.getNotFilled());
                     order.setStatus("PARTIAL");
+                    tOrder.setNotFilled(0);
+                    tOrder.setStatus("FILLED");
                 }
                 else if (tOrder.getNotFilled() > order.getNotFilled()){
                     tOrder.setTriggerPrice((((tOrder.getAmount() - tOrder.getNotFilled()) * tOrder.getTriggerPrice()) + ((tOrder.getNotFilled() - order.getNotFilled()) * order.getLimitPrice()))/(tOrder.getAmount() - order.getNotFilled()));
@@ -58,10 +58,10 @@ public class OrderList {
                 else if (tOrder.getNotFilled() < order.getNotFilled()){
                     tOrder.setTriggerPrice((((tOrder.getAmount() - tOrder.getNotFilled()) * tOrder.getTriggerPrice()) + (tOrder.getNotFilled() * tOrder.getLimitPrice()))/(tOrder.getAmount()));
                     order.setTriggerPrice((((order.getAmount() - order.getNotFilled()) * order.getTriggerPrice()) + ((order.getNotFilled() - tOrder.getNotFilled()) * tOrder.getLimitPrice()))/(order.getAmount() - tOrder.getNotFilled()));
-                    tOrder.setNotFilled(0);
-                    tOrder.setStatus("FILLED");
                     order.setNotFilled(order.getNotFilled() - tOrder.getNotFilled());
                     order.setStatus("PARTIAL");
+                    tOrder.setNotFilled(0);
+                    tOrder.setStatus("FILLED");
                 }
                 else if (tOrder.getNotFilled() > order.getNotFilled()){
                     tOrder.setTriggerPrice((((tOrder.getAmount() - tOrder.getNotFilled()) * tOrder.getTriggerPrice()) + ((tOrder.getNotFilled() - order.getNotFilled()) * tOrder.getLimitPrice()))/(tOrder.getAmount() - order.getNotFilled()));
@@ -99,10 +99,10 @@ public class OrderList {
                 else if (tOrder.getNotFilled() < order.getNotFilled()){
                     tOrder.setTriggerPrice((((tOrder.getAmount() - tOrder.getNotFilled()) * tOrder.getTriggerPrice()) + (tOrder.getNotFilled() * order.getLimitPrice()))/(tOrder.getAmount()));
                     order.setTriggerPrice((((order.getAmount() - order.getNotFilled()) * order.getTriggerPrice()) + ((order.getNotFilled() - tOrder.getNotFilled()) * order.getLimitPrice()))/(order.getAmount() - tOrder.getNotFilled()));
-                    tOrder.setNotFilled(0);
-                    tOrder.setStatus("FILLED");
                     order.setNotFilled(order.getNotFilled() - tOrder.getNotFilled());
                     order.setStatus("PARTIAL");
+                    tOrder.setNotFilled(0);
+                    tOrder.setStatus("FILLED");
                 }
                 else if (tOrder.getNotFilled() > order.getNotFilled()){
                     tOrder.setTriggerPrice((((tOrder.getAmount() - tOrder.getNotFilled()) * tOrder.getTriggerPrice()) + ((tOrder.getNotFilled() - order.getNotFilled())*order.getLimitPrice()))/(tOrder.getAmount() - order.getNotFilled()));
@@ -125,10 +125,10 @@ public class OrderList {
                 else if (tOrder.getNotFilled() < order.getNotFilled()){
                     tOrder.setTriggerPrice((((tOrder.getAmount() - tOrder.getNotFilled()) * tOrder.getTriggerPrice()) + (tOrder.getNotFilled() * tOrder.getLimitPrice()))/(tOrder.getAmount()));
                     order.setTriggerPrice((((order.getAmount() - order.getNotFilled()) * order.getTriggerPrice()) + ((order.getNotFilled() - tOrder.getNotFilled()) * tOrder.getLimitPrice()))/(order.getAmount() - tOrder.getNotFilled()));
-                    tOrder.setNotFilled(0);
-                    tOrder.setStatus("FILLED");
                     order.setNotFilled(order.getNotFilled() - tOrder.getNotFilled());
                     order.setStatus("PARTIAL");
+                    tOrder.setNotFilled(0);
+                    tOrder.setStatus("FILLED");
                 }
                 else if (tOrder.getNotFilled() > order.getNotFilled()){
                     tOrder.setTriggerPrice((((tOrder.getAmount() - tOrder.getNotFilled()) * tOrder.getTriggerPrice()) + ((tOrder.getNotFilled() - order.getNotFilled()) * tOrder.getLimitPrice()))/(tOrder.getAmount() - order.getNotFilled()));
